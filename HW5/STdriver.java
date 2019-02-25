@@ -18,7 +18,8 @@ class STdriver {
         st3.push(2);
         st3.push(1);
         MyStack st2 = new MyStack(10);
-        stackTransferNotUseStack(st3, st2);
+        st2.push(111);
+        tranferHelper(st3, st2);
         st2.popAll();
 
     }
@@ -81,6 +82,16 @@ class STdriver {
             st2.push(st1.pop());
         }
         return st2;
+    }
+
+    public static void tranferHelper(MyStack st1, MyStack st2){
+        st2.top = 0;
+        int temp;
+        if(!st1.isEmpty()){
+            temp=st1.pop();
+            tranferHelper(st1,st2);
+            st1.push(temp);
+        }
     }
 
 }
