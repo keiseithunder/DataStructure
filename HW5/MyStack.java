@@ -25,7 +25,7 @@ public class MyStack {
             return this.info[top];
         }
         System.out.println("this stack is empty");
-        return -99;
+        return 0;
     }
 
     public int top() {

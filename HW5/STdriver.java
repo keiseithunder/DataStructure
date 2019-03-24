@@ -90,7 +90,7 @@ class STdriver {
         if(!st1.isEmpty()){
             temp=st1.pop();
             tranferHelper(st1,st2);
-            st1.push(temp);
+            st2.push(temp);
         }
     }
 
